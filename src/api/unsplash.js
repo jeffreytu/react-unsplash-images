@@ -1,8 +1,10 @@
 import axios from "axios";
 
+console.log(process.env.REACT_APP_UNSPLASH_API_KEY);
+
 export default axios.create({
   baseURL: "https://api.unsplash.com/",
   headers: {
-    Authorization: "Client-ID tqlgjwZc30v0X2PBugOQat1lntj2KCW66RU6IZ6L5Tw",
+    Authorization: "Client-ID " + process.env.REACT_APP_UNSPLASH_API_KEY,
   },
 });
